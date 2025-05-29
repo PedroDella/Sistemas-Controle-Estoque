@@ -15,8 +15,8 @@ import view.categoria.CadastrarCategoriaView;
 import view.categoria.ConsultarCategoriasView;
 
 // IMPORT DAS TELAS DE MOVIMENTAÇÕES
-import view.movimentacoes.EntradaEstoqueView;
-import view.movimentacoes.SaidaEstoqueView;
+import view.movimentacao.EntradaEstoqueView;
+import view.movimentacao.SaidaEstoqueView;
 
 // IMPORT DAS TELAS DE RELATORIOS
 import view.relatorios.RelatorioAbaixoMinimoView;
