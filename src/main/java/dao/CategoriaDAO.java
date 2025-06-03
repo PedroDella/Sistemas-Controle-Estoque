@@ -219,7 +219,7 @@ public class CategoriaDAO {
             conn = ConnectionFactory.getConnection();
             
             // SQL para listar todas as categorias
-            String sql = "SELECT id, nome, tamanho, embalagem FROM categoria ORDER BY nome";
+            String sql = "SELECT id, nome, tamanho, embalagem FROM categoria ORDER BY id";
             
             // Prepara statement para consulta
             stmt = conn.prepareStatement(sql);

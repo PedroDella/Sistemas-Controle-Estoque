@@ -259,7 +259,7 @@ public class ProdutoDAO {
                          "c.embalagem as categoria_embalagem " +
                          "FROM produto p " +
                          "JOIN categoria c ON p.categoria_id = c.id " +
-                         "ORDER BY p.nome";
+                         "ORDER BY p.id";
             
             // Prepara statement para consulta
             stmt = conn.prepareStatement(sql);
