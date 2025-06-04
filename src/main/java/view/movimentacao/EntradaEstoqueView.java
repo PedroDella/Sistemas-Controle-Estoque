@@ -77,7 +77,7 @@ public class EntradaEstoqueView extends JFrame {
 
         // Campo “Hora” (pode ficar vazio para 00:00)
         painelCampos.add(new JLabel("Hora (HH:mm):"));
-        campoHora = new JTextField();
+        campoHora = new JTextField(LocalTime.now().format(FORMATO_HORA));
         campoHora.setToolTipText("Formato: 14:30 (se vazio, assume 00:00)");
         painelCampos.add(campoHora);
 

@@ -107,7 +107,7 @@ public class SaidaEstoqueView extends JFrame {
 
         gbc.gridx = 1;
         gbc.weightx = 0.7;
-        campoHora = new JTextField();
+        campoHora = new JTextField(LocalTime.now().format(FORMATO_HORA));
         campoHora.setToolTipText("Formato: 14:30 (se vazio, assume 00:00)");
         painelCampos.add(campoHora, gbc);
 
