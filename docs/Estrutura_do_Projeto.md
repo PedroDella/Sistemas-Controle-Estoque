@@ -31,12 +31,16 @@ src/main/java/
 │   │   ├── EntradaEstoqueView.java
 │   │   ├── SaidaEstoqueView.java
 │   │   └── HistoricoEstoqueView.java
-│   └── relatorio/
-│       ├── RelatorioPrecosView.java
-│       ├── RelatorioBalancoView.java
-│       ├── RelatorioAbaixoMinimoView.java
-│       ├── RelatorioAcimaMaximoView.java
-│       └── RelatorioPorCategoriaView.java
+│   ├── relatorio/
+│   │   ├── RelatorioPrecosView.java
+│   │   ├── RelatorioBalancoView.java
+│   │   ├── RelatorioAbaixoMinimoView.java
+│   │   ├── RelatorioAcimaMaximoView.java
+│   │   └── RelatorioPorCategoriaView.java
+│   └── ajuda/
+│       ├── DuvidasFrequentesView.java
+│       ├── SobreView.java
+│       └── SuporteView.java
 └── util/
     ├── Validador.java
     └── GeradorRelatorio.java
