@@ -13,6 +13,7 @@ import model.Produto;
  * Classe utilitária para geração de relatórios do sistema.
  * Contém métodos para gerar diferentes tipos de relatórios.
  */
+
 public class GeradorRelatorio {
     
     /**
@@ -22,6 +23,7 @@ public class GeradorRelatorio {
      * @param caminhoArquivo Caminho do arquivo onde o relatório será salvo
      * @return true se o relatório foi gerado com sucesso, false caso contrário
      */
+
     public static boolean gerarRelatorioPrecos(List<Produto> produtos, String caminhoArquivo) {
         try (FileOutputStream fos = new FileOutputStream(caminhoArquivo)) {
             StringBuilder relatorio = new StringBuilder();
@@ -62,6 +64,7 @@ public class GeradorRelatorio {
      * @param caminhoArquivo Caminho do arquivo onde o relatório será salvo
      * @return true se o relatório foi gerado com sucesso, false caso contrário
      */
+
     public static boolean gerarRelatorioBalanco(List<Produto> produtos, String caminhoArquivo) {
         try (FileOutputStream fos = new FileOutputStream(caminhoArquivo)) {
             StringBuilder relatorio = new StringBuilder();
@@ -109,6 +112,7 @@ public class GeradorRelatorio {
      * @param caminhoArquivo Caminho do arquivo onde o relatório será salvo
      * @return true se o relatório foi gerado com sucesso, false caso contrário
      */
+
     public static boolean gerarRelatorioAbaixoMinimo(List<Produto> produtos, String caminhoArquivo) {
         try (FileOutputStream fos = new FileOutputStream(caminhoArquivo)) {
             StringBuilder relatorio = new StringBuilder();
@@ -158,6 +162,7 @@ public class GeradorRelatorio {
      * @param caminhoArquivo Caminho do arquivo onde o relatório será salvo
      * @return true se o relatório foi gerado com sucesso, false caso contrário
      */
+
     public static boolean gerarRelatorioAcimaMaximo(List<Produto> produtos, String caminhoArquivo) {
         try (FileOutputStream fos = new FileOutputStream(caminhoArquivo)) {
             StringBuilder relatorio = new StringBuilder();
@@ -208,6 +213,7 @@ public class GeradorRelatorio {
      * @param caminhoArquivo Caminho do arquivo onde o relatório será salvo
      * @return true se o relatório foi gerado com sucesso, false caso contrário
      */
+
     public static boolean gerarRelatorioPorCategoria(List<Categoria> categorias, 
                                                     List<Object[]> dadosProdutosPorCategoria, 
                                                     String caminhoArquivo) {

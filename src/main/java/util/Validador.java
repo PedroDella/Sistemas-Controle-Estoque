@@ -4,6 +4,7 @@ package util;
  * Classe utilitária para validação de dados de entrada.
  * Contém métodos para validar diferentes tipos de dados.
  */
+
 public class Validador {
     
     /**
@@ -12,6 +13,7 @@ public class Validador {
      * @param texto O texto a ser validado
      * @return true se o texto for válido, false caso contrário
      */
+
     public static boolean validarTexto(String texto) {
         return texto != null && !texto.trim().isEmpty();
     }
@@ -22,6 +24,7 @@ public class Validador {
      * @param numero O número a ser validado
      * @return true se o número for positivo, false caso contrário
      */
+
     public static boolean validarPositivo(double numero) {
         return numero > 0;
     }
@@ -32,6 +35,7 @@ public class Validador {
      * @param numero O número a ser validado
      * @return true se o número for não-negativo, false caso contrário
      */
+
     public static boolean validarNaoNegativo(double numero) {
         return numero >= 0;
     }
@@ -44,6 +48,7 @@ public class Validador {
      * @param maximo O valor máximo do intervalo
      * @return true se o número estiver dentro do intervalo, false caso contrário
      */
+
     public static boolean validarIntervalo(double numero, double minimo, double maximo) {
         return numero >= minimo && numero <= maximo;
     }
@@ -54,6 +59,7 @@ public class Validador {
      * @param quantidade A quantidade a ser validada
      * @return true se a quantidade for válida, false caso contrário
      */
+
     public static boolean validarQuantidade(int quantidade) {
         return quantidade > 0;
     }
@@ -65,6 +71,7 @@ public class Validador {
      * @param estoqueAtual A quantidade atual em estoque
      * @return true se a quantidade for válida para saída, false caso contrário
      */
+
     public static boolean validarQuantidadeSaida(int quantidade, int estoqueAtual) {
         return validarQuantidade(quantidade) && quantidade <= estoqueAtual;
     }
@@ -75,6 +82,7 @@ public class Validador {
      * @param percentual O percentual a ser validado
      * @return true se o percentual for válido, false caso contrário
      */
+
     public static boolean validarPercentual(double percentual) {
         return percentual != 0;
     }
