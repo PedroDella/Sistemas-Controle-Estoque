@@ -3,12 +3,13 @@ package view.produto;
 import dao.ProdutoDAO;
 import model.Produto;
 
+// IMPORT DOS COMPONENTES DO SWING
 import javax.swing.JFrame;
 import javax.swing.JComboBox;
 import javax.swing.JButton;
 import javax.swing.JRadioButton;
 import javax.swing.ButtonGroup;
-import  javax.swing.JTextField;
+import javax.swing.JTextField;
 import javax.swing.JPanel;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
@@ -128,6 +129,7 @@ public class ReajustarPrecoProdutoUnitarioView extends JFrame {
     /**
      * Carrega todos os produtos existentes no banco e preenche o JComboBox.
      */
+
     private void carregarProdutos() {
         try {
             List<Produto> lista = new ProdutoDAO().listarTodos();

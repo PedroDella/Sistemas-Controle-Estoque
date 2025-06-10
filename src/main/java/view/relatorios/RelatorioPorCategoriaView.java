@@ -4,6 +4,7 @@ import dao.ProdutoDAO;
 import model.Categoria;
 import model.Produto;
 
+// IMPORT DOS COMPONENTES DO SWING
 import javax.swing.JFrame;
 import javax.swing.JTree;
 import javax.swing.JScrollPane;

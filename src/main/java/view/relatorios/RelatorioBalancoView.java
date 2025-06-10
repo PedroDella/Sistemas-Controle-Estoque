@@ -2,6 +2,7 @@ package view.relatorios;
 
 import dao.ProdutoDAO;
 
+// IMPORT DOS COMPONENTES DO SWING
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JLabel;

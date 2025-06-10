@@ -1,5 +1,6 @@
 package view;
 
+// IMPORT DOS COMPONENTES DO SWING
 import javax.swing.JDialog;
 import javax.swing.JTextArea;
 import javax.swing.JButton;

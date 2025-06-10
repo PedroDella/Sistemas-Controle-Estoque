@@ -2,6 +2,7 @@ package view.produto;
 
 import dao.ProdutoDAO;
 
+// IMPORT DOS COMPONENTES DO SWING
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JLabel;
@@ -20,6 +21,7 @@ import java.awt.event.ActionEvent;
  * Tela para reajustar em massa o preço unitário de todos os produtos
  * com base em um percentual informado.
  */
+
 public class ReajustarPrecoProdutoView extends JFrame {
 
     private JTextField tfPercentual;

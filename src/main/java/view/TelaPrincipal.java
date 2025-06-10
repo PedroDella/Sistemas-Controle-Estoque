@@ -46,6 +46,7 @@ import view.relatorios.RelatorioBalancoView;
  * Contém o menu principal com acesso a todas as funcionalidades.
  * Repaginada com cabeçalho, cores de fundo e fontes ajustadas.
  */
+
 public class TelaPrincipal extends JFrame {
 
     // Componentes da interface
@@ -66,6 +67,7 @@ public class TelaPrincipal extends JFrame {
      * Construtor da classe TelaPrincipal.
      * Inicializa a interface gráfica com estilo aprimorado.
      */
+
     public TelaPrincipal() {
         // Configurações básicas da janela
         setTitle("Sistema de Controle de Estoque");
@@ -90,6 +92,7 @@ public class TelaPrincipal extends JFrame {
     /**
      * Inicializa os componentes da interface e define tooltips e cores.
      */
+
     private void inicializarComponentes() {
         // ============================
         // 1) Barra de menu personalizada
@@ -288,6 +291,7 @@ public class TelaPrincipal extends JFrame {
     /**
      * Configura o layout da interface, adicionando cabeçalho, conteúdo e barra de status.
      */
+
     private void configurarLayout() {
         // Define a barra de menu personalizada
         setJMenuBar(menuBar);
@@ -325,6 +329,7 @@ public class TelaPrincipal extends JFrame {
     /**
      * Configura os eventos dos componentes de menu.
      */
+
     private void configurarEventos() {
         // ============================
         // Produtos

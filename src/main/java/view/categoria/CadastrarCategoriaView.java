@@ -3,6 +3,7 @@ package view.categoria;
 import dao.CategoriaDAO;
 import model.Categoria;
 
+// IMPORT DOS COMPONENTES DO SWING
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JLabel;

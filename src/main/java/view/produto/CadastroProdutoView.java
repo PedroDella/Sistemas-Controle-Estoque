@@ -5,6 +5,7 @@ import dao.ProdutoDAO;
 import model.Produto;
 import model.Categoria;
 
+// IMPORT DOS COMPONENTES DO SWING
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JLabel;
@@ -153,6 +154,7 @@ public class CadastroProdutoView extends JFrame {
     /**
      * Carrega todas as categorias existentes no banco e preenche o JComboBox.
      */
+
     private void carregarCategorias() {
         try {
             List<Categoria> lista = new CategoriaDAO().listarTodos();

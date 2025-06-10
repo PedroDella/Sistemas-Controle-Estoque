@@ -7,6 +7,7 @@ import javax.swing.SwingUtilities;
  * Classe principal que inicia a aplicação.
  * Ponto de entrada do sistema de controle de estoque.
  */
+
 public class App {
     
     /**
@@ -14,6 +15,7 @@ public class App {
      * 
      * @param args Argumentos de linha de comando (não utilizados)
      */
+
     public static void main(String[] args) {
         // Configura o look and feel para parecer com o sistema operacional
         try {

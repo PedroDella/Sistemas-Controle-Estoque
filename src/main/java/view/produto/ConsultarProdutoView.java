@@ -3,6 +3,7 @@ package view.produto;
 import dao.ProdutoDAO;
 import model.Produto;
 
+// IMPORT DOS COMPONENTES DO SWING
 import javax.swing.JFrame;
 import javax.swing.JTextArea;
 import javax.swing.JScrollPane;

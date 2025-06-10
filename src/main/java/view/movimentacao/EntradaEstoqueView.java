@@ -5,6 +5,7 @@ import dao.ProdutoDAO;
 import model.Movimentacao;
 import model.Produto;
 
+// IMPORT DOS COMPONENTES DO SWING
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JLabel;
@@ -34,6 +35,7 @@ import java.util.List;
  * Valida formatos de data e hora, pré-preenche a data atual e exibe
  * mensagens de erro claras para cada campo.
  */
+
 public class EntradaEstoqueView extends JFrame {
     private JComboBox<Produto> comboProdutos;
     private JTextField campoQuantidade;
@@ -168,6 +170,7 @@ public class EntradaEstoqueView extends JFrame {
     /**
      * Carrega todos os produtos existentes no banco e preenche o JComboBox<Produto>.
      */
+
     private void carregarProdutosNoCombo() {
         try {
             List<Produto> lista = new ProdutoDAO().listarTodos();
@@ -188,6 +191,7 @@ public class EntradaEstoqueView extends JFrame {
      * Converte uma string em inteiro, lançando NumberFormatException
      * com mensagem amigável se estiver vazia ou inválida.
      */
+
     private int parseInteiro(String texto, String nomeCampo) {
         if (texto.isEmpty()) {
             throw new NumberFormatException(nomeCampo + " não pode ficar vazio.");
@@ -204,6 +208,7 @@ public class EntradaEstoqueView extends JFrame {
      * Se data estiver vazia, usa a data atual. Se hora vazia, assume 00:00.
      * Lança IllegalArgumentException para formatos inválidos.
      */
+
     private LocalDateTime parseDataHora(String dataStr, String horaStr) {
         LocalDate data;
         if (dataStr.isEmpty()) {
