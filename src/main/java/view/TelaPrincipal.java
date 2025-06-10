@@ -20,6 +20,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 // IMPORT DAS TELAS DE PRODUTOS
+import view.ajuda.SobreView;
 import view.produto.CadastroProdutoView;
 import view.produto.ConsultarProdutoView;
 import view.produto.ReajustarPrecoProdutoView;
@@ -480,7 +481,7 @@ public class TelaPrincipal extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 lblStatus.setText("Abrindo tela de sobre...");
-                TelaSobre telaSobre = new TelaSobre(TelaPrincipal.this);
+                SobreView telaSobre = new SobreView(TelaPrincipal.this);
                 telaSobre.setVisible(true);
             }
         });

@@ -1,4 +1,4 @@
-package view;
+package view.ajuda;
 
 // IMPORT DOS COMPONENTES DO SWING
 import javax.swing.JDialog;
@@ -14,11 +14,11 @@ import java.awt.Dimension;
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;
 
-public class TelaSobre extends JDialog {
+public class SobreView extends JDialog {
     private JTextArea textArea;
     private JButton btnFechar;
 
-    public TelaSobre(Frame parent) {
+    public SobreView(Frame parent) {
         super(parent, "Sobre o Sistema", true);
         inicializarComponentes();
         configurarLayout();
