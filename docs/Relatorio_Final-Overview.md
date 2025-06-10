@@ -2,7 +2,7 @@
 
 ## Visão Geral do Projeto
 
-Este projeto implementa um Sistema de Controle de Estoque conforme os requisitos fornecidos. O sistema foi desenvolvido seguindo as melhores práticas de programação.
+Este projeto apresenta um Sistema de Controle de Estoque que atende aos requisitos definidos, com foco na organização do código, estrutura modular e facilidade de uso. A implementação contempla funcionalidades essenciais para a gestão de produtos, categorias e movimentações de estoque.
 
 ## Estrutura do Projeto
 
@@ -10,7 +10,7 @@ O projeto foi organizado seguindo o padrão DAO (Data Access Object) e a arquite
 
 - **model**: Classes que representam as entidades do sistema
 - **dao**: Classes responsáveis pelo acesso a dados
-- **view**: Classes de interface gráfica
+- **view**: Classes de interface gráfica (Telas de interação)
 - **util**: Classes utilitárias
 
 ## Funcionalidades Implementadas
@@ -60,7 +60,7 @@ O script SQL para criação do banco de dados está disponível em `db/estoque.s
 
 ## Como Executar o Projeto
 
-1. Importe o projeto no IntelliJ IDEA
+1. Importe o projeto no Apache NetBeans ou outra IDE de escolha
 2. Configure o MySQL e execute o script `db/estoque.sql`
 3. Ajuste as configurações de conexão em `ConnectionFactory.java` se necessário
 4. Execute a classe `App.java` para iniciar o sistema
@@ -76,4 +76,4 @@ Para completar a implementação, seria necessário:
 
 ## Conclusão
 
-O projeto foi estruturado seguindo as melhores práticas de desenvolvimento, com código limpo, bem documentado e em português. A arquitetura escolhida permite fácil manutenção e extensão do sistema para atender a novos requisitos no futuro.
+O projeto foi desenvolvido com foco em boas práticas de codificação, resultando em uma base sólida, limpa e bem documentada. A adoção da arquitetura MVC e do padrão DAO garante uma separação clara de responsabilidades, facilitando a manutenção, testes e futuras expansões do sistema. Dessa forma, o sistema está preparado para evoluir de forma organizada e eficiente conforme novas demandas surgirem.
