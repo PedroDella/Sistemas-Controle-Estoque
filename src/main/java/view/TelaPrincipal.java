@@ -41,6 +41,10 @@ import view.relatorios.RelatorioPorCategoriaView;
 import view.relatorios.RelatorioPrecosView;
 import view.relatorios.RelatorioBalancoView;
 
+// IMPORT DAS TELAS DE AJUDA
+import view.ajuda.DuvidasFrequentesView;
+
+
 /**
  * Classe principal da aplicação que exibe a tela inicial do sistema.
  * Contém o menu principal com acesso a todas as funcionalidades.
@@ -57,7 +61,7 @@ public class TelaPrincipal extends JFrame {
     private JMenuItem miEntradaEstoque, miSaidaEstoque, miHistoricoEstoque;
     private JMenuItem miRelatorioPrecos, miRelatorioBalanco, miRelatorioAbaixoMinimo;
     private JMenuItem miRelatorioAcimaMaximo, miRelatorioPorCategoria;
-    private JMenuItem miSobre;
+    private JMenuItem miSobre, miDuvidasFrequentes;
 
     private JPanel painelPrincipal;
     private JLabel lblCabecalho;
@@ -264,7 +268,14 @@ public class TelaPrincipal extends JFrame {
         miSobre.setForeground(Color.WHITE);
         miSobre.setToolTipText("Informações sobre o projeto e desenvolvedores");
 
+        miDuvidasFrequentes = new JMenuItem("Dúvidas Frequentes");
+        miDuvidasFrequentes.setOpaque(true);
+        miDuvidasFrequentes.setBackground(new Color(69, 94, 116));
+        miDuvidasFrequentes.setForeground(Color.WHITE);
+        miDuvidasFrequentes.setToolTipText("Perguntas e respostas sobre como usar o sistema");
+
         menuAjuda.add(miSobre);
+        menuAjuda.add(miDuvidasFrequentes);
 
         // ============================
         // 7) Painel principal (conteúdo central)
@@ -463,6 +474,14 @@ public class TelaPrincipal extends JFrame {
                 lblStatus.setText("Abrindo tela de sobre...");
                 TelaSobre telaSobre = new TelaSobre(TelaPrincipal.this);
                 telaSobre.setVisible(true);
+            }
+        });
+
+        miDuvidasFrequentes.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                lblStatus.setText("Abrindo tela de dúvidas frequentes...");
+                new DuvidasFrequentesView().setVisible(true);
             }
         });
     }
