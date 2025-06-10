@@ -50,7 +50,7 @@ public class CadastroProdutoView extends JFrame {
         tfNome    = new JTextField();
         tfPreco   = new JTextField();
         cbUnidade = new JComboBox<>(new String[]{
-                "Lata", "Pacote", "Garrafa", "Caixa", "Saco", "Envelope", "Pote"
+                "Unidade", "Lata", "Pacote", "Garrafa", "Caixa", "Saco", "Frasco", "Pote"
         });
         tfEstoque = new JTextField();
         tfMinimo  = new JTextField();

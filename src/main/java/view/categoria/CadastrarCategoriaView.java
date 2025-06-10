@@ -45,7 +45,7 @@ public class CadastrarCategoriaView extends JFrame {
         painelCampos.add(cbTamanho);
 
         painelCampos.add(new JLabel("Embalagem:"));
-        cbEmbalagem = new JComboBox<>(new String[]{"Lata", "Vidro", "Plástico"});
+        cbEmbalagem = new JComboBox<>(new String[]{"Lata", "Vidro", "Plástico", "Metal", "Papelão"});
         painelCampos.add(cbEmbalagem);
 
         btnSalvar = new JButton("Salvar");
