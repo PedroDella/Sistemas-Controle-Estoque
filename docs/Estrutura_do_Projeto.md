@@ -20,21 +20,23 @@ src/main/java/
 │   ├── TelaPrincipal.java
 │   ├── TelaSobre.java
 │   ├── produto/
-│   │   ├── TelaCadastroProduto.java
-│   │   ├── TelaConsultaProduto.java
-│   │   └── TelaReajusteProduto.java
+│   │   ├── CadastroProdutoView.java
+│   │   ├── ConsultarProdutoView.java
+│   │   ├── ReajustarPrecoProdutoUnitarioView.java
+│   │   └── ReajustarPrecoProdutoView.java
 │   ├── categoria/
-│   │   ├── TelaCadastroCategoria.java
-│   │   └── TelaConsultaCategoria.java
+│   │   ├── CadastrarCategoriaView.java
+│   │   └── ConsultarCategoriasView.java
 │   ├── movimentacao/
-│   │   ├── TelaEntradaEstoque.java
-│   │   └── TelaSaidaEstoque.java
+│   │   ├── EntradaEstoqueView.java
+│   │   ├── SaidaEstoqueView.java
+│   │   └── HistoricoEstoqueView.java
 │   └── relatorio/
-│       ├── TelaRelatorioPrecos.java
-│       ├── TelaRelatorioBalanco.java
-│       ├── TelaRelatorioAbaixoMinimo.java
-│       ├── TelaRelatorioAcimaMaximo.java
-│       └── TelaRelatorioPorCategoria.java
+│       ├── RelatorioPrecosView.java
+│       ├── RelatorioBalancoView.java
+│       ├── RelatorioAbaixoMinimoView.java
+│       ├── RelatorioAcimaMaximoView.java
+│       └── RelatorioPorCategoriaView.java
 └── util/
     ├── Validador.java
     └── GeradorRelatorio.java
