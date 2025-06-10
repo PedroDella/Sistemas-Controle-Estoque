@@ -43,6 +43,7 @@ import view.relatorios.RelatorioBalancoView;
 
 // IMPORT DAS TELAS DE AJUDA
 import view.ajuda.DuvidasFrequentesView;
+import view.ajuda.SuporteView;
 
 
 /**
@@ -61,7 +62,7 @@ public class TelaPrincipal extends JFrame {
     private JMenuItem miEntradaEstoque, miSaidaEstoque, miHistoricoEstoque;
     private JMenuItem miRelatorioPrecos, miRelatorioBalanco, miRelatorioAbaixoMinimo;
     private JMenuItem miRelatorioAcimaMaximo, miRelatorioPorCategoria;
-    private JMenuItem miSobre, miDuvidasFrequentes;
+    private JMenuItem miSobre, miDuvidasFrequentes, miSuporte;
 
     private JPanel painelPrincipal;
     private JLabel lblCabecalho;
@@ -274,8 +275,15 @@ public class TelaPrincipal extends JFrame {
         miDuvidasFrequentes.setForeground(Color.WHITE);
         miDuvidasFrequentes.setToolTipText("Perguntas e respostas sobre como usar o sistema");
 
+        miSuporte = new JMenuItem("Suporte");
+        miSuporte.setOpaque(true);
+        miSuporte.setBackground(new Color(69, 94, 116));
+        miSuporte.setForeground(Color.WHITE);
+        miSuporte.setToolTipText("Contato e informações para suporte técnico");
+
         menuAjuda.add(miSobre);
         menuAjuda.add(miDuvidasFrequentes);
+        menuAjuda.add(miSuporte);
 
         // ============================
         // 7) Painel principal (conteúdo central)
@@ -482,6 +490,14 @@ public class TelaPrincipal extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 lblStatus.setText("Abrindo tela de dúvidas frequentes...");
                 new DuvidasFrequentesView().setVisible(true);
+            }
+        });
+
+        miSuporte.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                lblStatus.setText("Abrindo tela de suporte...");
+                new SuporteView().setVisible(true);
             }
         });
     }
