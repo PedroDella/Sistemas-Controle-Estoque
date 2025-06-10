@@ -35,8 +35,4 @@ public class DuvidasFrequentesView extends JFrame {
         JScrollPane scroll = new JScrollPane(areaTexto);
         add(scroll);
     }
-
-    public static void main(String[] args) {
-        SwingUtilities.invokeLater(() -> new DuvidasFrequentesView().setVisible(true));
-    }
 }

@@ -28,8 +28,4 @@ public class SuporteView extends JFrame {
 
         add(painel);
     }
-
-    public static void main(String[] args) {
-        SwingUtilities.invokeLater(() -> new SuporteView().setVisible(true));
-    }
 }
