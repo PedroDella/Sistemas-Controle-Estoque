@@ -18,6 +18,7 @@ import java.util.List;
  * Implementa operações de CRUD (Create, Read, Update, Delete) e consultas específicas,
  * além de atualizar o estoque do produto associado.
  */
+
 public class MovimentacaoDAO {
 
     // Instância da fábrica de conexões
@@ -26,6 +27,7 @@ public class MovimentacaoDAO {
     /**
      * Construtor padrão que inicializa a fábrica de conexões.
      */
+
     public MovimentacaoDAO() {
         this.connectionFactory = new ConnectionFactory();
     }
@@ -36,6 +38,7 @@ public class MovimentacaoDAO {
      * @param movimentacao A movimentação a ser inserida
      * @return O ID gerado para a movimentação inserida ou -1 em caso de erro
      */
+
     public int inserir(Movimentacao movimentacao) {
         Connection conn = null;
         PreparedStatement stmt = null;
@@ -109,6 +112,7 @@ public class MovimentacaoDAO {
      * @param movimentacao A movimentação que afeta o estoque
      * @throws SQLException Se ocorrer um erro ao atualizar o estoque
      */
+
     private void atualizarEstoqueProduto(Connection conn, Movimentacao movimentacao) throws SQLException {
         PreparedStatement stmt = null;
         try {
@@ -141,6 +145,7 @@ public class MovimentacaoDAO {
      * @param id O ID da movimentação a ser consultada
      * @return A movimentação encontrada ou null se não existir
      */
+
     public Movimentacao consultar(int id) {
         Connection conn = null;
         PreparedStatement stmt = null;
@@ -204,6 +209,7 @@ public class MovimentacaoDAO {
      *
      * @return Uma lista com todas as movimentações
      */
+
     public List<Movimentacao> listarTodos() {
         List<Movimentacao> movimentacoes = new ArrayList<>();
         Connection conn = null;
@@ -269,6 +275,7 @@ public class MovimentacaoDAO {
      * @param produtoId O ID do produto
      * @return Uma lista com as movimentações do produto
      */
+
     public List<Movimentacao> listarPorProduto(int produtoId) {
         List<Movimentacao> movimentacoes = new ArrayList<>();
         Connection conn = null;
@@ -336,6 +343,7 @@ public class MovimentacaoDAO {
      * @param tipo O tipo de movimentação ("Entrada" ou "Saída")
      * @return Uma lista com as movimentações do tipo especificado
      */
+
     public List<Movimentacao> listarPorTipo(String tipo) {
         List<Movimentacao> movimentacoes = new ArrayList<>();
         Connection conn = null;
@@ -404,6 +412,7 @@ public class MovimentacaoDAO {
      * @param stmt Statement a ser fechado (pode ser null)
      * @param conn Conexão a ser fechada (pode ser null)
      */
+
     private void fecharRecursos(ResultSet rs, PreparedStatement stmt, Connection conn) {
         try {
             if (rs != null) {

@@ -17,6 +17,7 @@ import java.util.Map;
  * Classe de acesso a dados para a entidade Produto.
  * Implementa operações de CRUD (Create, Read, Update, Delete) e consultas específicas.
  */
+
 public class ProdutoDAO {
 
     // Instância da fábrica de conexões
@@ -25,6 +26,7 @@ public class ProdutoDAO {
     /**
      * Construtor padrão que inicializa a fábrica de conexões.
      */
+
     public ProdutoDAO() {
         this.connectionFactory = new ConnectionFactory();
     }
@@ -35,6 +37,7 @@ public class ProdutoDAO {
      * @param produto O produto a ser inserido
      * @return O ID gerado para o produto inserido ou -1 em caso de erro
      */
+
     public int inserir(Produto produto) {
         Connection conn = null;
         PreparedStatement stmt = null;
@@ -89,6 +92,7 @@ public class ProdutoDAO {
      * @param produto O produto a ser atualizado
      * @return true se a atualização foi bem-sucedida, false caso contrário
      */
+
     public boolean atualizar(Produto produto) {
         Connection conn = null;
         PreparedStatement stmt = null;
@@ -133,6 +137,7 @@ public class ProdutoDAO {
      * @param id O ID do produto a ser excluído
      * @return true se a exclusão foi bem-sucedida, false caso contrário
      */
+
     public boolean excluir(int id) {
         Connection conn = null;
         PreparedStatement stmt = null;
@@ -168,6 +173,7 @@ public class ProdutoDAO {
      * @param id O ID do produto a ser consultado
      * @return O produto encontrado ou null se não existir
      */
+
     public Produto consultar(int id) {
         Connection conn = null;
         PreparedStatement stmt = null;
@@ -230,6 +236,7 @@ public class ProdutoDAO {
      *
      * @return Uma lista com todos os produtos
      */
+
     public List<Produto> listarTodos() {
         Connection conn = null;
         PreparedStatement stmt = null;
@@ -294,6 +301,7 @@ public class ProdutoDAO {
      * @param percentual O percentual de reajuste (ex: 10 para 10%)
      * @return O número de produtos reajustados
      */
+
     public int reajustarPrecos(double percentual) {
         Connection conn = null;
         PreparedStatement stmt = null;
@@ -327,6 +335,7 @@ public class ProdutoDAO {
      * @param percentual O percentual de aumento (ex: 10 para 10%).
      * @return O número de produtos atualizados (0 se nenhum for encontrado).
      */
+
     public int reajustarPrecoPorcentagem(int idProduto, double percentual) {
         Connection conn = null;
         PreparedStatement stmt = null;
@@ -354,6 +363,7 @@ public class ProdutoDAO {
      * @param novoValor O novo valor unitário a ser definido para o produto.
      * @return O número de produtos atualizados (0 se nenhum for encontrado).
      */
+
     public int reajustarPrecoDireto(int idProduto, double novoValor) {
         Connection conn = null;
         PreparedStatement stmt = null;
@@ -379,6 +389,7 @@ public class ProdutoDAO {
      *
      * @return Uma lista com os produtos abaixo da quantidade mínima
      */
+
     public List<Produto> listarAbaixoMinimo() {
         Connection conn = null;
         PreparedStatement stmt = null;
@@ -443,6 +454,7 @@ public class ProdutoDAO {
      *
      * @return Uma lista com os produtos acima da quantidade máxima
      */
+
     public List<Produto> listarAcimaMaximo() {
         Connection conn = null;
         PreparedStatement stmt = null;
@@ -507,6 +519,7 @@ public class ProdutoDAO {
      *
      * @return Uma lista de produtos contendo nome, preço unitário, unidade, quantidade em estoque e categoria.
      */
+
     public List<Produto> listarComPrecos() {
         Connection conn = null;
         PreparedStatement stmt = null;
@@ -563,6 +576,7 @@ public class ProdutoDAO {
      *
      * @return O valor monetário total de todos os produtos em estoque.
      */
+
     public double calcularValorTotalEstoque() {
         Connection conn = null;
         PreparedStatement stmt = null;
@@ -597,6 +611,7 @@ public class ProdutoDAO {
      *
      * @return Um mapa onde a chave é a categoria e o valor é a lista de produtos pertencentes a ela.
      */
+
     public Map<Categoria, List<Produto>> listarProdutosPorCategoria() {
         Connection conn = null;
         PreparedStatement stmt = null;
@@ -655,6 +670,7 @@ public class ProdutoDAO {
      * @param stmt Statement a ser fechado (pode ser null)
      * @param conn Conexão a ser fechada (pode ser null)
      */
+
     private void fecharRecursos(ResultSet rs, PreparedStatement stmt, Connection conn) {
         try {
             if (rs != null) {

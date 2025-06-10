@@ -6,6 +6,7 @@ import java.time.LocalDateTime;
  * Classe que representa uma movimentação de estoque no sistema.
  * Registra entradas e saídas de produtos no estoque.
  */
+
 public class Movimentacao {
 
     // Atributos da classe
@@ -25,6 +26,7 @@ public class Movimentacao {
      *  - dataHora como momento atual
      *  - observacao vazia
      */
+
     public Movimentacao() {
         this(0, null, "", 0, LocalDateTime.now(), "");
     }
@@ -39,6 +41,7 @@ public class Movimentacao {
      * @param dataHora Data e hora da movimentação
      * @param observacao Observação sobre a movimentação
      */
+
     public Movimentacao(int id, Produto produto, String tipo, int quantidade,
                         LocalDateTime dataHora, String observacao) {
         this.id = id;
@@ -58,6 +61,7 @@ public class Movimentacao {
      * @param quantidade Quantidade movimentada
      * @param observacao Observação sobre a movimentação
      */
+
     public Movimentacao(Produto produto, String tipo, int quantidade, String observacao) {
         this(0, produto, tipo, quantidade, LocalDateTime.now(), observacao);
     }
@@ -69,6 +73,7 @@ public class Movimentacao {
      *
      * @return O id da movimentação
      */
+
     public int getId() {
         return id;
     }
@@ -78,6 +83,7 @@ public class Movimentacao {
      *
      * @param id O id a ser definido
      */
+
     public void setId(int id) {
         this.id = id;
     }
@@ -87,6 +93,7 @@ public class Movimentacao {
      *
      * @return O produto da movimentação
      */
+
     public Produto getProduto() {
         return produto;
     }
@@ -96,6 +103,7 @@ public class Movimentacao {
      *
      * @param produto O produto a ser definido
      */
+
     public void setProduto(Produto produto) {
         this.produto = produto;
     }
@@ -105,6 +113,7 @@ public class Movimentacao {
      *
      * @return O tipo da movimentação ("Entrada" ou "Saída")
      */
+
     public String getTipo() {
         return tipo;
     }
@@ -114,6 +123,7 @@ public class Movimentacao {
      *
      * @param tipo O tipo a ser definido ("Entrada" ou "Saída")
      */
+
     public void setTipo(String tipo) {
         this.tipo = tipo;
     }
@@ -123,6 +133,7 @@ public class Movimentacao {
      *
      * @return A quantidade movimentada
      */
+
     public int getQuantidade() {
         return quantidade;
     }
@@ -132,6 +143,7 @@ public class Movimentacao {
      *
      * @param quantidade A quantidade a ser definida
      */
+
     public void setQuantidade(int quantidade) {
         this.quantidade = quantidade;
     }
@@ -141,6 +153,7 @@ public class Movimentacao {
      *
      * @return A data e hora da movimentação
      */
+
     public LocalDateTime getDataHora() {
         return dataHora;
     }
@@ -150,6 +163,7 @@ public class Movimentacao {
      *
      * @param dataHora A data e hora a ser definida
      */
+
     public void setDataHora(LocalDateTime dataHora) {
         this.dataHora = dataHora;
     }
@@ -159,6 +173,7 @@ public class Movimentacao {
      *
      * @return A observação da movimentação
      */
+
     public String getObservacao() {
         return observacao;
     }
@@ -168,6 +183,7 @@ public class Movimentacao {
      *
      * @param observacao A observação a ser definida
      */
+
     public void setObservacao(String observacao) {
         this.observacao = observacao;
     }
@@ -177,6 +193,7 @@ public class Movimentacao {
      *
      * @return true se for entrada, false caso contrário
      */
+
     public boolean isEntrada() {
         return "Entrada".equalsIgnoreCase(tipo);
     }
@@ -186,6 +203,7 @@ public class Movimentacao {
      *
      * @return true se for saída, false caso contrário
      */
+
     public boolean isSaida() {
         return "Saída".equalsIgnoreCase(tipo);
     }
@@ -196,6 +214,7 @@ public class Movimentacao {
      *
      * @return true se a operação foi bem-sucedida, false caso contrário
      */
+
     public boolean atualizarEstoque() {
         if (produto == null) {
             return false;
@@ -223,6 +242,7 @@ public class Movimentacao {
      *
      * @return true se ficar abaixo do mínimo, false caso contrário
      */
+
     public boolean resultaraEmEstoqueAbaixoDoMinimo() {
         if (produto == null || !isSaida()) {
             return false;
@@ -237,6 +257,7 @@ public class Movimentacao {
      *
      * @return true se ficar acima do máximo, false caso contrário
      */
+
     public boolean resultaraEmEstoqueAcimaDoMaximo() {
         if (produto == null || !isEntrada()) {
             return false;
@@ -251,6 +272,7 @@ public class Movimentacao {
      *
      * @return Uma String representando a movimentação
      */
+
     @Override
     public String toString() {
         return tipo + " de " + quantidade + " " + (produto != null ? produto.getUnidade() : "unidades") +

@@ -8,6 +8,7 @@ import java.sql.SQLException;
  * Classe responsável por criar e gerenciar conexões com o banco de dados.
  * Implementa o padrão Factory para centralizar a criação de conexões.
  */
+
 public class ConnectionFactory {
 
     // Atributos de instância (não estáticos)
@@ -22,6 +23,7 @@ public class ConnectionFactory {
      * @return Uma conexão com o banco de dados
      * @throws SQLException Se ocorrer um erro ao conectar ao banco de dados
      */
+
     public Connection getConnection() throws SQLException {
         try {
             // Carrega o driver JDBC
@@ -41,6 +43,7 @@ public class ConnectionFactory {
      * 
      * @param conn A conexão a ser fechada
      */
+
     public void closeConnection(Connection conn) {
         try {
             if (conn != null) {
@@ -57,6 +60,7 @@ public class ConnectionFactory {
      * @param conn A conexão a ser fechada
      * @param mensagem A mensagem de erro a ser exibida
      */
+
     public void closeConnection(Connection conn, String mensagem) {
         System.err.println(mensagem);
         closeConnection(conn);

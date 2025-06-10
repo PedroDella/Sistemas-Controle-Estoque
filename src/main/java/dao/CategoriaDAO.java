@@ -13,6 +13,7 @@ import model.Categoria;
  * Classe de acesso a dados para a entidade Categoria.
  * Implementa operações de CRUD (Create, Read, Update, Delete) e consultas específicas.
  */
+
 public class CategoriaDAO {
 
     // Instância da fábrica de conexões
@@ -21,6 +22,7 @@ public class CategoriaDAO {
     /**
      * Construtor padrão que inicializa a fábrica de conexões
      */
+
     public CategoriaDAO() {
         this.connectionFactory = new ConnectionFactory();
     }
@@ -31,6 +33,7 @@ public class CategoriaDAO {
      * @param categoria A categoria a ser inserida
      * @return O ID gerado para a categoria inserida ou -1 em caso de erro
      */
+
     public int inserir(Categoria categoria) {
         Connection conn = null;
         PreparedStatement stmt = null;
@@ -79,6 +82,7 @@ public class CategoriaDAO {
      * @param categoria A categoria a ser atualizada
      * @return true se a atualização foi bem-sucedida, false caso contrário
      */
+
     public boolean atualizar(Categoria categoria) {
         Connection conn = null;
         PreparedStatement stmt = null;
@@ -117,6 +121,7 @@ public class CategoriaDAO {
      * @param id O ID da categoria a ser excluída
      * @return true se a exclusão foi bem-sucedida, false caso contrário
      */
+
     public boolean excluir(int id) {
         Connection conn = null;
         PreparedStatement stmt = null;
@@ -152,6 +157,7 @@ public class CategoriaDAO {
      * @param id O ID da categoria a ser consultada
      * @return A categoria encontrada ou null se não existir
      */
+
     public Categoria consultar(int id) {
         Connection conn = null;
         PreparedStatement stmt = null;
@@ -196,6 +202,7 @@ public class CategoriaDAO {
      *
      * @return Uma lista com todas as categorias
      */
+
     public List<Categoria> listarTodos() {
         Connection conn = null;
         PreparedStatement stmt = null;
@@ -241,6 +248,7 @@ public class CategoriaDAO {
      *
      * @return Uma lista de arrays com [id_categoria, nome_categoria, quantidade]
      */
+
     public List<Object[]> contarProdutosPorCategoria() {
         Connection conn = null;
         PreparedStatement stmt = null;
@@ -291,6 +299,7 @@ public class CategoriaDAO {
      * @param stmt Statement a ser fechado (pode ser null)
      * @param conn Conexão a ser fechada (pode ser null)
      */
+
     private void fecharRecursos(ResultSet rs, PreparedStatement stmt, Connection conn) {
         try {
             if (rs != null) rs.close();

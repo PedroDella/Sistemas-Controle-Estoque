@@ -4,6 +4,7 @@ package model;
  * Classe que representa um produto no sistema de controle de estoque.
  * Contém informações como nome, preço, quantidades e categoria.
  */
+
 public class Produto {
     
     // Atributos da classe
@@ -20,6 +21,7 @@ public class Produto {
      * Construtor padrão da classe Produto.
      * Inicializa todos os atributos com valores “neutros” (id=0, nome/vazios, números zero, categoria nula).
      */
+
     public Produto() {
         this(0, "", 0.0, "", 0, 0, 0, null);
     }
@@ -36,6 +38,7 @@ public class Produto {
      * @param quantidadeMaxima Quantidade máxima permitida em estoque
      * @param categoria Categoria do produto
      */
+
     public Produto(int id, String nome, double precoUnitario, String unidade, 
                   int quantidadeEstoque, int quantidadeMinima, int quantidadeMaxima, 
                   Categoria categoria) {
@@ -60,6 +63,7 @@ public class Produto {
      * @param quantidadeMaxima Quantidade máxima permitida em estoque
      * @param categoria Categoria do produto
      */
+
     public Produto(String nome, double precoUnitario, String unidade, 
                   int quantidadeEstoque, int quantidadeMinima, int quantidadeMaxima, 
                   Categoria categoria) {
@@ -88,6 +92,7 @@ public class Produto {
      * 
      * @param id O id a ser definido
      */
+
     public void setId(int id) {
         this.id = id;
     }
@@ -97,6 +102,7 @@ public class Produto {
      * 
      * @return O nome do produto
      */
+
     public String getNome() {
         return nome;
     }
@@ -106,6 +112,7 @@ public class Produto {
      * 
      * @param nome O nome a ser definido
      */
+
     public void setNome(String nome) {
         this.nome = nome;
     }
@@ -115,6 +122,7 @@ public class Produto {
      * 
      * @return O preço unitário
      */
+
     public double getPrecoUnitario() {
         return precoUnitario;
     }
@@ -124,6 +132,7 @@ public class Produto {
      * 
      * @param precoUnitario O preço unitário a ser definido
      */
+
     public void setPrecoUnitario(double precoUnitario) {
         this.precoUnitario = precoUnitario;
     }
@@ -133,6 +142,7 @@ public class Produto {
      * 
      * @return A unidade de medida
      */
+
     public String getUnidade() {
         return unidade;
     }
@@ -142,6 +152,7 @@ public class Produto {
      * 
      * @param unidade A unidade de medida a ser definida
      */
+
     public void setUnidade(String unidade) {
         this.unidade = unidade;
     }
@@ -151,6 +162,7 @@ public class Produto {
      * 
      * @return A quantidade em estoque
      */
+
     public int getQuantidadeEstoque() {
         return quantidadeEstoque;
     }
@@ -160,6 +172,7 @@ public class Produto {
      * 
      * @param quantidadeEstoque A quantidade em estoque a ser definida
      */
+
     public void setQuantidadeEstoque(int quantidadeEstoque) {
         this.quantidadeEstoque = quantidadeEstoque;
     }
@@ -169,6 +182,7 @@ public class Produto {
      * 
      * @return A quantidade mínima
      */
+
     public int getQuantidadeMinima() {
         return quantidadeMinima;
     }
@@ -178,6 +192,7 @@ public class Produto {
      * 
      * @param quantidadeMinima A quantidade mínima a ser definida
      */
+
     public void setQuantidadeMinima(int quantidadeMinima) {
         this.quantidadeMinima = quantidadeMinima;
     }
@@ -187,6 +202,7 @@ public class Produto {
      * 
      * @return A quantidade máxima
      */
+
     public int getQuantidadeMaxima() {
         return quantidadeMaxima;
     }
@@ -196,6 +212,7 @@ public class Produto {
      * 
      * @param quantidadeMaxima A quantidade máxima a ser definida
      */
+
     public void setQuantidadeMaxima(int quantidadeMaxima) {
         this.quantidadeMaxima = quantidadeMaxima;
     }
@@ -205,6 +222,7 @@ public class Produto {
      * 
      * @return A categoria do produto
      */
+
     public Categoria getCategoria() {
         return categoria;
     }
@@ -214,6 +232,7 @@ public class Produto {
      * 
      * @param categoria A categoria a ser definida
      */
+
     public void setCategoria(Categoria categoria) {
         this.categoria = categoria;
     }
@@ -223,6 +242,7 @@ public class Produto {
      * 
      * @return true se estiver abaixo do mínimo, false caso contrário
      */
+
     public boolean estaAbaixoDoMinimo() {
         return quantidadeEstoque < quantidadeMinima;
     }
@@ -232,6 +252,7 @@ public class Produto {
      * 
      * @return true se estiver acima do máximo, false caso contrário
      */
+
     public boolean estaAcimaDoMaximo() {
         return quantidadeEstoque > quantidadeMaxima;
     }
@@ -241,6 +262,7 @@ public class Produto {
      * 
      * @return O valor total (preço unitário * quantidade em estoque)
      */
+
     public double getValorTotalEmEstoque() {
         return precoUnitario * quantidadeEstoque;
     }
@@ -250,6 +272,7 @@ public class Produto {
      * 
      * @param percentual Percentual de reajuste (ex: 10 para 10%)
      */
+
     public void reajustarPreco(double percentual) {
         this.precoUnitario = this.precoUnitario * (1 + (percentual / 100));
     }
@@ -259,6 +282,7 @@ public class Produto {
      * 
      * @return Uma String representando o produto
      */
+
     @Override
     public String toString() {
         return nome + " - " + unidade + " - R$ " + String.format("%.2f", precoUnitario);
@@ -270,6 +294,7 @@ public class Produto {
      * @param obj O objeto a ser comparado
      * @return true se os produtos forem iguais, false caso contrário
      */
+
     @Override
     public boolean equals(Object obj) {
         if (this == obj) {
