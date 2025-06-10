@@ -136,6 +136,7 @@ public class TelaPrincipal extends JFrame {
 
         menuProdutos.add(miCadastrarProduto);
         menuProdutos.add(miConsultarProdutos);
+        menuProdutos.addSeparator();
         menuProdutos.add(miReajustarPrecos);
         menuProdutos.add(miReajustarPrecosUnitario);
 
@@ -194,6 +195,7 @@ public class TelaPrincipal extends JFrame {
 
         menuMovimentacoes.add(miEntradaEstoque);
         menuMovimentacoes.add(miSaidaEstoque);
+        menuMovimentacoes.addSeparator();
         menuMovimentacoes.add(miHistoricoEstoque);
 
         // ============================
@@ -238,6 +240,7 @@ public class TelaPrincipal extends JFrame {
 
         menuRelatorios.add(miRelatorioPrecos);
         menuRelatorios.add(miRelatorioBalanco);
+        menuRelatorios.addSeparator();
         menuRelatorios.add(miRelatorioAbaixoMinimo);
         menuRelatorios.add(miRelatorioAcimaMaximo);
         menuRelatorios.add(miRelatorioPorCategoria);
